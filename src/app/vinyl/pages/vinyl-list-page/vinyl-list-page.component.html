@@ -1,0 +1,7 @@
+<div class="row">
+  <app-vinyl-preview
+    *ngFor="let vinyl of vinyls | sort 'title' "
+    [vinyl]="vinyl"
+    (clickButton)="onClickVinylButton($event)" >
+  </app-vinyl-preview>
+</div>

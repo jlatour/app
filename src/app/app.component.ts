@@ -9,12 +9,6 @@ import { VinylService } from './core/services/vinyl.service';
 })
 export class AppComponent {
 
-vinyls: Vinyl[];
-
-constructor(private vinylService: VinylService ){
-  this.vinyls = vinylService.getAll();
-}
-
   onClickVinylButton(vinyl: Vinyl) {
     console.log(vinyl);
   }
