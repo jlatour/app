@@ -5,7 +5,7 @@ import { VinylService } from 'src/app/core/services/vinyl.service';
 @Component({
   selector: 'app-vinyl-preview',
   templateUrl: './vinyl-preview.component.html',
-  styleUrls: ['./vinyl-preview.component.css']
+  styleUrls: [ './vinyl-preview.component.css' ]
 })
 export class VinylPreviewComponent implements OnInit {
 
@@ -28,13 +28,17 @@ export class VinylPreviewComponent implements OnInit {
   getDateStyle() {
     return {
       color: this.changing ? 'green' : 'black'
-    }
+    };
   }
 
   onClickButton() {
     console.log(this.changing);
     this.changing = !this.changing;
     this.clickButton.emit(this.vinyl);
+  }
+
+  onClickCover(){
+    console.log('ok');
   }
 
 }

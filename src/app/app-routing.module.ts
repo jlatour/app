@@ -9,12 +9,14 @@ const routes: Route[] = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
   {path: 'about', component: AboutComponent},
-  {path: 'vinyl/list', component: VinylListPageComponent},
-  {path: '**', redirectTo: '/home', pathMatch: 'full'}
+  {path: 'vinyl', loadChildren: () => import('./vinyl/vinyl.module').then((module) => module.VinylModule) },
+  // {path: '**', redirectTo: '/home', pathMatch: 'full'}
 ];
 
 @NgModule( {
-  imports: [ RouterModule.forRoot(routes) ],
+  imports: [
+      RouterModule.forRoot(routes)
+  ],
   exports: [ RouterModule]
 })
 

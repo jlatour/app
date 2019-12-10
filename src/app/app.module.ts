@@ -8,8 +8,8 @@ import { CoreModule } from './core/core.module';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 
-import { VinylListPageComponent } from './vinyl/pages/vinyl-list-page/vinyl-list-page.component';
 import { AppRoutingModule } from './app-routing.module';
+
 
 @NgModule({
   declarations: [
@@ -18,8 +18,7 @@ import { AppRoutingModule } from './app-routing.module';
     AboutComponent
   ],
   imports: [
-    BrowserModule,
-    VinylModule, SharedModule, CoreModule, AppRoutingModule
+    BrowserModule, SharedModule, CoreModule, AppRoutingModule, VinylModule
   ],
   providers: [],
   bootstrap: [AppComponent]
