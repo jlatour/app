@@ -8,17 +8,8 @@ import { CoreModule } from './core/core.module';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 
-import {Route} from '@angular/router';
-import {RouterModule} from '@angular/router';
 import { VinylListPageComponent } from './vinyl/pages/vinyl-list-page/vinyl-list-page.component';
-
-const routes: Route[] = [
-  {path: '', redirectTo: '/home', pathMatch: 'full'},
-  {path: 'home', component: HomeComponent},
-  {path: 'about', component: AboutComponent},
-  {path: 'vinyl/list', component: VinylListPageComponent},
-  {path: '**', redirectTo: '/home', pathMatch: 'full'}
-];
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +19,7 @@ const routes: Route[] = [
   ],
   imports: [
     BrowserModule,
-    VinylModule, SharedModule, CoreModule, RouterModule.forRoot(routes)
+    VinylModule, SharedModule, CoreModule, AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
