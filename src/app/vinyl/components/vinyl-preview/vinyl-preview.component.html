@@ -1,0 +1,20 @@
+<div class="card">
+    <div class="section media">
+      <img [src]="getImageUrl()" alt="Album picture of {{vinyl.title}}">
+    </div>
+    <div class="section" [ngClass]="{'in-edit': changing}">
+        <h3>{{vinyl.title}}<br><small>par {{vinyl.artist}}</small></h3>
+    </div>
+    <div class="section" style="text-align: center;">
+      <h5 class="bold" [ngStyle]="getDateStyle()">{{vinyl.releaseDate | date }}</h5>
+    </div>
+    <div *ngIf="changing">
+      <app-counting-buttons
+        [(value)]="vinyl.releaseDate"
+      >
+      </app-counting-buttons>
+    </div>
+    <div>
+      <button (click)="onClickButton()" >Modifier</button>
+    </div>
+</div>

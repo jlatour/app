@@ -1,0 +1,22 @@
+import { Component } from '@angular/core';
+import { Vinyl } from './core/models/vinyl.interface';
+import { VinylService } from './core/services/vinyl.service';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+
+vinyls: Vinyl[];
+
+constructor(private vinylService: VinylService ){
+  this.vinyls = vinylService.getAll();
+}
+
+  onClickVinylButton(vinyl: Vinyl) {
+    console.log(vinyl);
+  }
+}
+
