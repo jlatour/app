@@ -19,4 +19,7 @@ export class VinylListPageComponent implements OnInit {
     this.vinyls = this.vinylService.getAll();
   }
 
+  onClickVinylButton(event) {
+    console.log(event);
+  }
 }

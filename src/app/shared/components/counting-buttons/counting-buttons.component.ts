@@ -23,11 +23,13 @@ export class CountingButtonsComponent implements OnInit {
 
   incValue() {
     this.value += 1;
+    console.log(this.value);
     this.emit();
   }
 
   decValue() {
     this.value -= 1;
+    console.log(this.value);
     this.emit();
   }
 

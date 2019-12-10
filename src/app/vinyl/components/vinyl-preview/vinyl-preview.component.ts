@@ -16,8 +16,7 @@ export class VinylPreviewComponent implements OnInit {
 
   changing = false;
 
-  constructor(private vinylService: VinylService) {
-    console.log(vinylService);
+  constructor() {
   }
 
   ngOnInit() {}
@@ -33,6 +32,7 @@ export class VinylPreviewComponent implements OnInit {
   }
 
   onClickButton() {
+    console.log(this.changing);
     this.changing = !this.changing;
     this.clickButton.emit(this.vinyl);
   }

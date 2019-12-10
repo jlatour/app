@@ -9,8 +9,6 @@ import { VinylService } from './core/services/vinyl.service';
 })
 export class AppComponent {
 
-  onClickVinylButton(vinyl: Vinyl) {
-    console.log(vinyl);
-  }
+
 }
 
