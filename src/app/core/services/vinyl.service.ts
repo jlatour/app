@@ -30,8 +30,8 @@ export class VinylService {
   }
 
   getOne(id: number): Vinyl {
-    if (!id) {throw Error('Needs a valid ID !'); }
-    return this.vinyls.find((a) => a.id === id);
+    if (null == id) {throw Error('Needs a valid ID !'); }
+    return this.vinyls.find((a) => a.id === +id);
   }
 
   addOne(vinyl: Vinyl): Vinyl{

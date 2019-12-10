@@ -1,3 +1,7 @@
 .in-edit {
   color: green;
 }
+
+.section.media {
+  cursor: pointer;
+}

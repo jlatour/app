@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
 import { Vinyl } from 'src/app/core/models/vinyl.interface';
 import { VinylService } from 'src/app/core/services/vinyl.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-vinyl-preview',
@@ -16,7 +17,7 @@ export class VinylPreviewComponent implements OnInit {
 
   changing = false;
 
-  constructor() {
+  constructor( public router: Router) {
   }
 
   ngOnInit() {}
@@ -38,7 +39,7 @@ export class VinylPreviewComponent implements OnInit {
   }
 
   onClickCover(){
-    console.log('ok');
+    this.router.navigateByUrl('vinyl/detail/' + this.vinyl.id);
   }
 
 }
